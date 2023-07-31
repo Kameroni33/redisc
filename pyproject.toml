@@ -1,6 +1,6 @@
 [project]
 name = "redisc"
-version = "0.0.5"
+version = "0.0.6"
 description = "high performance redis client with cython for realtime applications"
 readme = "README.rst"
 requires-python = ">=3.7"

@@ -15,7 +15,7 @@ ext_modules = [
 
 setup(
     name='redisc',
-    version='0.0.5',
+    version='0.0.6',
     description=short_description,
     long_description=long_description,
     url='https://github.com/Kameroni33/redisc',
