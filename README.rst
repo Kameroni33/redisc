@@ -92,6 +92,9 @@ Depending on your needs, you can download the requirements to build/deploy the p
 
 .. code-block::
 
+    python3 -m pip install cython        # required to run setup.py script
+    python3 -m pip install setuptools    # required to run setup.py
+
     python3 -m pip install .             # general requirements
     python3 -m pip install .[deploy]     # deployment requirements
     python3 -m pip install .[test]       # unit test requirements

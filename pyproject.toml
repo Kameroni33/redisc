@@ -17,8 +17,6 @@ classifiers=[
 ]
 
 dependencies = [
-    "cython>=3.0.0",
-    "setuptools>=68.0.0",
     "hiredis>=2.2.3",
     "gevent>=23.7.0",
 ]
@@ -33,6 +31,8 @@ benchmark = [
 ]
 
 deploy = [
+    "cython>=3.0.0",
+    "setuptools>=33.1.1",
     "wheel>=0.41.0",
     "twine>=4.0.2",
 ]
@@ -45,5 +45,5 @@ deploy = [
 "Bug Tracker" = "https://github.com/Kameroni33/credis/issues"
 
 [build-system]
-requires = ["cython>=3.0.0", "setuptools>=68.0.0"]
+requires = ["cython>=3.0.0", "setuptools>=33.1.1"]
 build-backend = "setuptools.build_meta"
