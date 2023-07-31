@@ -2,7 +2,7 @@ from gevent.event import AsyncResult
 from contextlib import contextmanager
 from .base import Connection
 
-cdef class ResourcePool:
+cdef class ConnectionPool:
     """
     simple pool, used for gevent, there is not true concurrency.
     """

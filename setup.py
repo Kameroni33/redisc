@@ -10,12 +10,12 @@ with open('README.rst', 'r') as file:
 
 ext_modules = [
     Extension('redisc.base', ['src/redisc/base.pyx']),
-    Extension('redisc.geventpool', ['src/redisc/geventpool.pyx']),
+    Extension('redisc.pool', ['src/redisc/pool.pyx']),
 ]
 
 setup(
     name='redisc',
-    version='0.0.3',
+    version='0.0.5',
     description=short_description,
     long_description=long_description,
     url='https://github.com/Kameroni33/redisc',

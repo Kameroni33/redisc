@@ -1,2 +1,2 @@
 from .base import Connection, RedisProtocolError, RedisReplyError, ConnectionError, AuthenticationError
-from .geventpool import ResourcePool
+from .pool import ConnectionPool

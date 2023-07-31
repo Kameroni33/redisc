@@ -110,4 +110,4 @@ When uploading distribution files to PyPI, you need an authentication token. Ple
 
 .. code-block::
 
-    python -m twine upload --repository testpypi dist/*  # upload to 'test' server
+    python3 -m twine upload --repository testpypi dist/*  # upload to 'test' server

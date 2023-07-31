@@ -1,6 +1,6 @@
 [project]
 name = "redisc"
-version = "0.0.3"
+version = "0.0.5"
 description = "high performance redis client with cython for realtime applications"
 readme = "README.rst"
 requires-python = ">=3.7"
@@ -45,5 +45,5 @@ deploy = [
 "Bug Tracker" = "https://github.com/Kameroni33/credis/issues"
 
 [build-system]
-requires = ["cython", "setuptools", "wheel", "gevent"]
+requires = ["cython>=3.0.0", "setuptools>=68.0.0"]
 build-backend = "setuptools.build_meta"
