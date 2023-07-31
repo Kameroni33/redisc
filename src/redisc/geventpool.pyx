@@ -1,5 +1,6 @@
 from gevent.event import AsyncResult
 from contextlib import contextmanager
+from .base import Connection
 
 cdef class ResourcePool:
     """
@@ -17,7 +18,7 @@ cdef class ResourcePool:
 
     cdef list _waiters
 
-    def __cinit__(self, max_count, ctor, *args, **kwargs):
+    def __cinit__(self, max_count=16, ctor=Connection, *args, **kwargs):
         self.ctor = ctor
         self.args = args
         self.name = kwargs.pop('name', None)

@@ -1,8 +1,8 @@
 *.swp
-/build
 *.html
 *.so
 *.pyc
 *.c
-credis.egg-info/
+build/
 dist/
+redisc.egg-info/
