@@ -17,24 +17,24 @@ classifiers=[
 ]
 
 dependencies = [
-    "hiredis",
-    "gevent",
+    "cython>=3.0.0",
+    "setuptools>=68.0.0",
+    "hiredis>=2.2.3",
+    "gevent>=23.7.0",
 ]
 
 [project.optional-dependencies]
 test = [
-    "pytest",
+    "pytest>=7.4.0",
 ]
 
 benchmark = [
-    "redis",
+    "redis>=4.6.0",
 ]
 
 deploy = [
-    "cython",
-    "setuptools",
-    "wheel",
-    "twine",
+    "wheel>=0.41.0",
+    "twine>=4.0.2",
 ]
 
 [project.license]
