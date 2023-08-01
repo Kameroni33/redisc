@@ -8,6 +8,9 @@ from cpython.ref cimport Py_INCREF
 from cpython.long cimport PyLong_AsLong
 from cpython.exc cimport PyErr_ExceptionMatches, PyErr_Occurred, PyErr_Clear
 
+import socket
+import hiredis
+
 # portable with python2.6
 cdef long PyLong_AsLongAndOverflow(object o, int *overflow) except? -1:
     cdef long ret
@@ -58,20 +61,22 @@ cdef bytes simple_bytes(s):
         else:
             return s
 
-import socket
-import hiredis
 
 class RedisProtocolError(Exception):
     pass
 
+
 class RedisReplyError(Exception):
     pass
+
 
 class ConnectionError(Exception):
     pass
 
+
 class AuthenticationError(Exception):
     pass
+
 
 cdef class Connection(object):
     """Manages TCP communication to and from a Redis server"""

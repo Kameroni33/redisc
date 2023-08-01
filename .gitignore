@@ -1,8 +1,14 @@
 *.swp
-/build
 *.html
 *.so
 *.pyc
 *.c
-credis.egg-info/
+
+# JetBrain config files
+.idea/
+*.idea
+
+# deployment files
+build/
 dist/
+redisc.egg-info/

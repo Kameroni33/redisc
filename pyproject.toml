@@ -1,27 +1,49 @@
-[tool.poetry]
-name = "credis"
-version = "2.0.1"
-description = "high performance redis client implemented with cython"
-authors = ["yihuang <yi.codeplayer@gmail.com>"]
-license = "MIT"
-readme = 'README.rst'
-repository = "https://github.com/yihuang/credis"
-build = "build.py"
+[project]
+name = "redisc"
+version = "1.0.0"
+description = "A high performance Redis client implemented in Cython for realtime linux applications."
+readme = "README.rst"
+requires-python = ">=3.7"
+
+authors = [
+    { name="kameron", email="khr675@gmail.com" },
+]
+
 classifiers=[
-    "Development Status :: 6 - Mature",
-    "Intended Audience :: Developers",
-    "Programming Language :: Python",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Cython",
     "Topic :: Database"
 ]
 
-[tool.poetry.dependencies]
-python = "^3.7"
-hiredis = "^1.1.0"
+dependencies = [
+    "hiredis>=2.2.3",
+    "gevent>=23.7.0",
+]
 
-[tool.poetry.dev-dependencies]
-pytest = "^6.1.0"
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0",
+]
+
+benchmark = [
+    "redis>=4.6.0",
+]
+
+deploy = [
+    "cython>=3.0.0",
+    "setuptools>=33.1.1",
+    "wheel>=0.41.0",
+    "twine>=4.0.2",
+]
+
+[project.license]
+"file" = "LICENSE"
+
+[project.urls]
+"Homepage" = "https://github.com/Kameroni33/credis"
+"Bug Tracker" = "https://github.com/Kameroni33/credis/issues"
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "cython", "setuptools>=50.3"]
-build-backend = "poetry.core.masonry.api"
+requires = ["cython>=3.0.0", "setuptools>=33.1.1"]
+build-backend = "setuptools.build_meta"

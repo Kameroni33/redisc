@@ -36,7 +36,7 @@ class DummyConnectionPool(object):
 
 pool = DummyConnectionPool()
 pool.conn.connect()
-rds = redis.StrictRedis(connection_pool=pool)
+rds = redisc.StrictRedis(connection_pool=pool)
 
 
 def bench_simple():

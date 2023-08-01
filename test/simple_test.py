@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from credis import Connection
+from src.redisc import Connection
 import unittest
 
 

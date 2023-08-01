@@ -4,9 +4,9 @@ import timeit
 import cProfile
 import patch_socket
 
-import credis
+from src import redisc
 
-rds = credis.Connection()
+rds = redisc.Connection()
 rds.connect()
 
 
